@@ -44,7 +44,7 @@ public class PlayerControls : MonoBehaviour
         _targetVelocity = moveDirection * _movementSpeed;
         _targetVelocity.y = _rb.linearVelocity.y;
 
-        _rb.linearVelocity = _targetVelocity;
+        _rb.MovePosition(_rb.position + _targetVelocity * Time.fixedDeltaTime);
 
         if (jump && _canJump)
         {
@@ -55,7 +55,6 @@ public class PlayerControls : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("bye");
         if (collision.collider.CompareTag("Ground"))
         {
             _canJump = true;
@@ -64,7 +63,6 @@ public class PlayerControls : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        Debug.Log("hello");
         if (collision.collider.CompareTag("Ground"))
         {
             _canJump = false;
