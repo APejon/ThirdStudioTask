@@ -4663,7 +4663,7 @@ Transform:
   m_GameObject: {fileID: 1116690339}
   serializedVersion: 2
   m_LocalRotation: {x: 0.25340122, y: 0.00000019607974, z: -0.000000051363276, w: 0.9673613}
-  m_LocalPosition: {x: 20.543097, y: 3.6599998, z: 11.47}
+  m_LocalPosition: {x: 20.543097, y: 4.448, z: 11.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5705,7 +5705,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementSpeed: 5
-  _jumpForce: 4
+  _jumpForce: 6
+  _dashPower: 20
+  _dashDuration: 0.5
   _camera: {fileID: 330585543}
 --- !u!65 &1370105303
 BoxCollider:
